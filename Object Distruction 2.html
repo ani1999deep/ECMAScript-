@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Distruction</title>
+  </head>
+  <body>
+    <script>
+      let student = {
+        name: "Anideeep",
+
+        city: "Kolkata",
+
+        age: 20,
+        subject :{
+          subject1: "Math",
+
+          subject2: "English",
+        },
+      };
+
+      let { name, city, age, subject :{ subject1, subject2}} = student;
+
+      console.log(subject1);
+    </script>
+  </body>
+</html>

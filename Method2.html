@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class student{
+
+constructor(name,age){
+
+    this.studentname=name;
+    this.studentage=age;
+
+    console.log("Constructor Function");
+}
+
+hello(){
+
+    console.log("Hello"+ this.studentname+"Your age is"  +this.studentage);
+
+    
+
+    console.log(`Hello ${this.studentname} Your age is ${this.studentage} `);
+    
+
+    document.write(`Hello ${this.studentname} Your age is ${this.studentage} `);
+    
+
+}
+
+  static  staticMethod(){
+
+    console.log("Okey is Okey");
+}
+}
+let a=new student("This is a prototype function",18);
+
+let b=new student("This is a another  prototype function",18);
+
+
+
+a.hello();
+b.hello();
+
+student.staticMethod();
+    </script>
+</body>
+</html>

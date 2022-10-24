@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array destructuring</title>
+</head>
+<body>
+    <script>
+// let student=["Anideep","AEIE",22];
+
+// let[name,dept,age]=student;
+
+// you can set defult value
+// let[name,dept,age,mobile=' ']=student;
+
+// another example
+let student=["Anideep","AEIE",22,["Hindi","English"]];
+
+let[name,dept,age,[subject1,subject2]]=student;
+
+console.log(subject1);
+
+console.log(subject2);
+
+
+    </script>
+</body>
+</html>

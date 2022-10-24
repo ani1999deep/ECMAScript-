@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inharitence</title>
+</head>
+<body>
+    <script>
+class teacher{
+
+    constructor(teacherName,attendSal)
+    {
+
+
+
+    this.TeacherNameClass=teacherName;
+
+    // this.Teacherdept=dept;
+
+    this.Attend=attendSal;
+
+
+}
+getName(){
+
+   return this.TeacherNameClass;
+}
+} 
+
+class regTeacher extends teacher{
+    getSal(){
+
+    return this.Attend*10;
+
+    }
+}
+
+class partTeacher extends teacher{
+
+    getSal(){
+        return this.Attend*5;
+    }
+}
+
+const rtech= new regTeacher("Amit",8);
+
+console.log(rtech.getSal());
+
+console.log(rtech.getName());
+
+const pteach= new partTeacher("Anideep",5);
+
+console.log(pteach.getSal());
+
+console.log(pteach.getName());
+
+
+    </script>
+</body>
+</html>

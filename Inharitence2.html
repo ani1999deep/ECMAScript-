@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance and Polymorphism </title>
+</head>
+<body>
+    <script>
+// this is for regular student
+class student{
+
+     
+    constructor(fname,lname,sClass)
+            {
+                this.firstName=fname;
+
+                this.lastName=lname;
+
+                this.Class=sClass;
+
+
+            }
+            getName(){
+
+                return this.firstName+" "+ this.lastName;
+            }
+}
+
+
+
+
+        class regstudent extends student{
+          
+            getFee(){
+
+
+                return this.Class*10;
+
+
+            }
+            getName(){
+
+// this is fetch name child class and parent class -(super.function name())
+
+               console.log(super.getName());
+
+
+                // this is overwriting
+
+return "Full Name is  "+this.firstName+" "+ this.lastName;
+}
+
+        }
+// this is for parttime student
+
+        class partTstudent extends student{
+        
+
+getFee(){
+
+
+return this.Class*7;
+
+
+}
+
+        
+    }
+        const rstudent=new regstudent("Anideep","Boss",9);
+
+        const pstudent=new partTstudent("deep","Boss",8);
+
+        console.log(rstudent.getName());
+
+        console.log(rstudent.getFee());
+
+        console.log(pstudent.getName());
+
+        console.log(pstudent.getFee());
+
+
+        
+    </script>
+</body>
+</html>
