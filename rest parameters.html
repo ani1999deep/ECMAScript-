@@ -8,17 +8,34 @@
 </head>
 <body>
     <script>
-function add(a,b,...x)
-{
-    let sum =0;
-    for(i=0;i<x.length;i++)
-    {
-        sum=sum+x[i];
-        console.log(sum);
+// function add(a,b,...x)
+// {
+//     let sum =0;
+//     for(i=0;i<x.length;i++)
+//     {
+//         sum=sum+x[i];
+//         console.log(sum);
+//     }
+//     console.log(sum);
+// }
+// add(20,30,30,20,25,25);
+
+
+
+
+
+
+// es6 rest parameter
+function fun(...input){
+    let sum = 0;
+    for(let i of input){
+        sum+=i;
     }
-    console.log(sum);
+    return sum;
 }
-add(20,30,30,20,25,25);
+console.log(fun(1,2)); //3
+console.log(fun(1,2,3)); //6
+console.log(fun(1,2,3,4,5)); //15
     </script>
 </body>
 </html>
